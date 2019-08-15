@@ -32,7 +32,7 @@ source /opt/ros/crystal/setup.bash
 sudo apt install python-rosdep
 mkdir -p uros_ws/src
 cd uros_ws
-git clone --recursive https://github.com/micro-ROS/micro-ros-build.git src/micro-ros-build
+git clone https://github.com/micro-ROS/micro-ros-build.git src/micro-ros-build
 ```
 
 All subsequent instructions assume that you're running them in the `uros_ws` directory. 
@@ -41,7 +41,8 @@ All subsequent instructions assume that you're running them in the `uros_ws` dir
 ## 2/4 Building this package
 
 ```shell
-colcon build --packages-select micro_ros_setup
+rosdep install --from-paths src -i
+colcon build
 source install/local_setup.bash
 ```
 
