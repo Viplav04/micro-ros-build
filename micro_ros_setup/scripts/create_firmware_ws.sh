@@ -16,9 +16,9 @@ pushd $FW_TARGETDIR >/dev/null
     vcs import --input $PREFIX/config/uros_packages.repos >/dev/null
 
     # install uclibc
-    if [ ! -d "NuttX/libs/libxx/uClibc++" ]
+    if [ ! -d "NuttX/libs/libxx/libcxx" ]
     then
-      pushd uclibc >/dev/null
+      pushd libcxx >/dev/null
       ./install.sh ../NuttX
       popd >/dev/null
     fi

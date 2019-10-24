@@ -2,12 +2,12 @@ repositories:
   NuttX:
     type: git
     url: https://github.com/micro-ROS/NuttX.git
-    version: drive_base
+    version: feature/libcxx
   apps:
     type: git
     url: https://github.com/micro-ROS/apps.git
     version: crystal
-  uclibc:
+  libcxx:
     type: git
-    url:  https://github.com/micro-ROS/uclibc.git
+    url: https://bitbucket.org/acassis/libcxx
     version: master
